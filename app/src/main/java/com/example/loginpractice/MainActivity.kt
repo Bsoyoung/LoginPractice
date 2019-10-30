@@ -2,6 +2,7 @@ package com.example.loginpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
 
             var inputId = idEdit.text.toString()
-            
+            var inputPw = pwEdit.text.toString()
+
+            Toast.makeText(this,String.format("ID : %s, PW : %s",inputId,inputPw),Toast.LENGTH_SHORT).show()
 
         }
     }
